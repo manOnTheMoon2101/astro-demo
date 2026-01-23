@@ -1,5 +1,5 @@
 ---
-import hero from "../assets/images/hero.png";
+import hero from "../assets/images/hero.webp";
 import { Trophy } from "@lucide/astro";
 import { Users } from "@lucide/astro";
 import { Zap } from "@lucide/astro";
@@ -7,7 +7,7 @@ import { Globe } from "@lucide/astro";
 ---
 
 <div
-  class="bg-cover bg-center bg-no-repeat flex flex-col relative px-4 pb-32 md:pb-20"
+  class="bg-cover bg-center bg-no-repeat flex flex-col relative px-4 pb-32 md:pb-20 will-change-transform"
   style={`background-image: url(${hero.src})`}
 >
   <div class="absolute inset-0 bg-[#0C1424]/80 z-0"></div>
@@ -73,4 +73,18 @@ import { Globe } from "@lucide/astro";
   </div>
 </div>
 
-<style></style>
+<style>
+  /* Optimize background image rendering */
+  .bg-cover {
+    background-attachment: scroll; /* Better performance than fixed */
+    transform: translateZ(0); /* Force hardware acceleration */
+  }
+  
+  /* Optimize for mobile performance */
+  @media (max-width: 768px) {
+    .bg-cover {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+</style>

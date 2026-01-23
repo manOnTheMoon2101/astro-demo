@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import "@fontsource/nunito";
 import "@fontsource/nunito-sans";
+import hero from "../assets/images/hero.webp";
 ---
 
 <!doctype html>
@@ -15,6 +16,8 @@ import "@fontsource/nunito-sans";
     <meta name="generator" content={Astro.generator} />
     <title>Tembeza International - Technology Solutions</title>
     <meta name="description" content="Tembeza International offers expert technology consulting, custom development, and reliable maintenance services." />
+    <link rel="preload" href="/fonts/nunito-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" href={hero.src} fetchpriority="high" />
   </head>
   <body class="bg-[#0C1424] text-white">
     <slot />
@@ -32,20 +35,20 @@ import "@fontsource/nunito-sans";
   }
 
   h2 {
-    font-family: "Nunito", cursive;
+    font-family: "Nunito", sans-serif;
   }
    h3 {
-    font-family: "Nunito", cursive;
+    font-family: "Nunito", sans-serif;
   }
   p {
-    font-family: "Nunito-Sans", cursive;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   span {
-    font-family: "Nunito-Sans", cursive;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   button {
-    font-family: "Nunito-Sans", cursive;
+    font-family: "Nunito Sans", sans-serif;
   }
 </style>
