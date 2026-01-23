@@ -1,5 +1,5 @@
 <script>
-  import motherboard from "../assets/images/motherboard.png";
+  import formBG from "../assets/images/formBG.png";
   let x = $state({
     name: "",
     email: "",
@@ -58,7 +58,7 @@
 </script>
 
 <div
-  style={`background-image: url(${motherboard.src})`}
+  style={`background-image: url(${formBG.src})`}
   class="flex flex-row justify-around text-white"
 >
   <div>
