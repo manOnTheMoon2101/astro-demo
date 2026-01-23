@@ -1,5 +1,9 @@
 ---
 import motherboard from "../assets/images/motherboard.png";
+import { ChartSpline } from "@lucide/astro";
+import { ShieldCheck } from "@lucide/astro";
+import { MessageSquareDot } from "@lucide/astro";
+import { BadgeCheck } from "@lucide/astro";
 ---
 
 <div class="flex flex-col mt-48">
@@ -10,7 +14,7 @@ import motherboard from "../assets/images/motherboard.png";
     <div class="absolute inset-0 bg-[#0C1424]/80 z-0"></div>
     <div class="flex flex-row justify-evenly mx-48 relative z-10">
       <div class="w-1/2">
-        <h2 class="text-6xl">
+        <h2 class="text-6xl font-bold">
           What can we<br />offer <span class="text-[#C4062A]">you?</span>
         </h2>
       </div>
@@ -25,73 +29,91 @@ import motherboard from "../assets/images/motherboard.png";
     </div>
   </div>
 
-  <div class="flex flex-row justify-around">
-    <div>
-      <div>logo</div>
+  <div class="flex flex-row justify-around my-8">
+    <div class="flex flex-col justify-start py-24 mx-24 px-6">
+      <span class="p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><MessageSquareDot /></span
+      >
 
-      <div>
-        <h3>Technological Consulting</h3>
-      </div>
+      <h3 class="text-4xl font-bold text-left w-full">
+        Technological Consulting
+      </h3>
 
-      <div>
-        <p>
-          We optimize systems, data and cybersecurity management, helping
-          companies adapt effective and secure digital solutions.
-        </p>
-      </div>
+      <p class="text-left my-6">
+        We optimize systems, data and cybersecurity management, helping
+        companies adapt effective and secure digital solutions.
+      </p>
 
-      <div>
+      <div class="text-left">
         <ul>
-          <li>Sytem optimization</li>
-          <li>Data management</li>
-          <li>Cybersecurity</li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Sytem optimization
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Data management
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Cybersecurity
+          </li>
         </ul>
       </div>
     </div>
 
-    <div>
-      <div>logo</div>
+    <div
+      class="bg-gray-200/10 flex flex-col justify-start py-24 mx-24 border rounded-2xl px-6"
+    >
+      <span class="p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><ChartSpline /></span
+      >
 
-      <div>
-        <h3>Technical and Digital Development</h3>
-      </div>
+      <h3 class="text-4xl font-bold text-left w-full">
+        Technical and Digital Development
+      </h3>
 
-      <div>
-        <p>
-          Powers businesses by creating customized solutions that improve
-          processes, integrate technologies, and optimize operational
-          efficiency.
-        </p>
-      </div>
+      <p class="text-left my-6">
+        Powers businesses by creating customized solutions that improve
+        processes, integrate technologies, and optimize operational efficiency.
+      </p>
 
-      <div>
+      <div class="text-left">
         <ul>
-          <li>Custom software development</li>
-          <li>Systems integration</li>
-          <li>Process automation</li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Custom software
+            development
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Systems integration
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Process automation
+          </li>
         </ul>
       </div>
     </div>
 
-    <div>
-      <div>logo</div>
+    <div class="flex flex-col justify-start py-24 mx-24 px-6">
+      <span class="p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><ShieldCheck /></span
+      >
 
-      <div>
-        <h3>Technical Maintenance</h3>
-      </div>
+      <h3 class="text-4xl font-bold text-left w-full">Technical Maintenance</h3>
 
-      <div>
-        <p>
-          Ensure the continuous operation of system by updating, repairing and
-          optimizing equipment and software.
-        </p>
-      </div>
+      <p class="text-left my-6">
+        Ensure the continuous operation of system by updating, repairing and
+        optimizing equipment and software.
+      </p>
 
-      <div>
+      <div class="text-left">
         <ul>
-          <li>Preventive maintenance</li>
-          <li>24/7 Technical Support</li>
-          <li>Software updates</li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Preventive maintenance
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />24/7 Technical Support
+          </li>
+          <li class="my-4 flex flex-row">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2" />Software updates
+          </li>
         </ul>
       </div>
     </div>
