@@ -1,5 +1,9 @@
 ---
 import hero from "../assets/images/hero.png";
+import { Trophy } from "@lucide/astro";
+import { Users } from "@lucide/astro";
+import { Zap } from "@lucide/astro";
+import { Globe } from "@lucide/astro";
 ---
 
 <div
@@ -27,32 +31,41 @@ import hero from "../assets/images/hero.png";
     class="flex flex-row justify-between absolute bottom-0 left-0 right-0 transform translate-y-1/2 px-8 gap-4 my-8 z-10"
   >
     <div
-      class="bg-amber-300 w-full h-16 flex items-center justify-center rounded-lg shadow-lg"
+      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
     >
-      a
+      <span class="p-4 my-2 rounded bg-[#C4062A]"
+        ><Trophy class="text-white" /></span
+      >
+
+      <h3 class="text-4xl font-bold">100% Experience</h3>
+
+      <span>5 years of service</span>
     </div>
 
     <div
-      class="bg-red-300 w-full h-16 flex items-center justify-center rounded-lg shadow-lg"
+      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
     >
-      b
+      <span class="p-4 my-2 rounded bg-[#C4062A]"><Users /></span>
+      <h3 class="text-4xl">Digital Solutions</h3>
+      <span>Technological Development</span>
     </div>
 
     <div
-      class="bg-blue-300 w-full h-16 flex items-center justify-center rounded-lg shadow-lg"
+      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
     >
-      c
+      <span class="p-4 my-2 rounded bg-[#C4062A]"><Zap /></span>
+      <h3 class="text-4xl font-bold">Maintenace</h3>
+      <span>Specialized Support</span>
     </div>
 
     <div
-      class="bg-green-300 w-full h-16 flex items-center justify-center rounded-lg shadow-lg"
+      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
     >
-      d
+      <span class="p-4 my-2 rounded bg-[#C4062A]"> <Globe /></span>
+      <h3 class="text-4xl font-bold">Confidentiality</h3>
+      <span>Secure Data</span>
     </div>
   </div>
 </div>
 
-
-<style>
-
-</style>
+<style></style>
