@@ -82,12 +82,6 @@
     </div>
 
     <div class="p-12">
-      {#if message}
-        <div class="message {messageType}">
-          {message}
-        </div>
-      {/if}
-
       <form onsubmit={handleSubmit}>
         <div class="flex flex-row my-6">
           <input
@@ -115,6 +109,7 @@
             bind:value={x.phone}
             disabled={isSubmitting}
           />
+
           <input
             placeholder="Subject"
             bind:value={x.subject}
@@ -134,8 +129,26 @@
           ></textarea>
         </div>
 
+        {#if message}
+          <div
+            class="my-4 p-3 rounded-lg {messageType === 'error'
+              ? 'bg-red-100 border border-red-400 text-red-700'
+              : 'bg-green-100 border border-green-400 text-green-700'}"
+          >
+            {#if messageType === "error"}
+              <div class="flex items-center">
+                <span class="font-medium">Error: {message}</span>
+              </div>
+            {:else}
+              <div class="flex items-center">
+                <span class="font-medium">Success: {message}</span>
+              </div>
+            {/if}
+          </div>
+        {/if}
+
         <button
-          class="bg-[#C4062A] p-4 rounded-full self-center px-12"
+          class="bg-[#C4062A] p-4 rounded-full self-center px-12 cursor-pointer"
           type="submit"
           disabled={isSubmitting}
         >
