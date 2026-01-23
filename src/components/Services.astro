@@ -1,20 +1,27 @@
 ---
 import motherboard from "../assets/images/motherboard.png";
+import { ChartSpline } from "@lucide/astro";
+import { ShieldCheck } from "@lucide/astro";
+import { MessageSquareDot } from "@lucide/astro";
+import { BadgeCheck } from "@lucide/astro";
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col mt-24 md:mt-48">
   <div
-    class="h-1/2 text-white bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+    class="text-white bg-cover bg-center bg-no-repeat relative px-4 py-12 md:py-16"
     style={`background-image: url(${motherboard.src})`}
   >
-    <div class="flex flex-row justify-evenly">
-      <div class="w-1/2">
-        <h2 class="text-6xl">What can we offer <span>You</span></h2>
+    <div class="absolute inset-0 bg-[#0C1424]/80 z-0"></div>
+    <div class="flex flex-col md:flex-row justify-evenly max-w-6xl mx-auto relative z-10 gap-8 md:gap-12 items-start md:items-center">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">
+          What can we<br />offer <span class="text-[#C4062A]">you?</span>
+        </h2>
       </div>
 
-      <div class="w-1/2">
-        <p>
-          At Tembeza, we offer you expert advice, bespoke technical development
+      <div class="w-full md:w-1/2">
+        <p class="text-center md:text-left text-sm md:text-base leading-relaxed">
+          At Tembeza, we offer you expert advice, bespoke technical development
           and ongoing maintenance to optimize your technology, improve
           efficiency and ensure uninterrupted performance.
         </p>
@@ -22,11 +29,93 @@ import motherboard from "../assets/images/motherboard.png";
     </div>
   </div>
 
-  <div class="flex flex-row justify-around">
-    <div>Technological Consulting</div>
+  <div class="flex flex-col lg:flex-row justify-around my-8 px-4 gap-8">
+    <div class="flex flex-col justify-start py-12 md:py-24 px-6 max-w-md mx-auto lg:mx-0">
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><MessageSquareDot class="w-5 h-5 md:w-6 md:h-6" /></span
+      >
 
-    <div>Technical and Digital Development</div>
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-left w-full">
+        Technological Consulting
+      </h3>
 
-    <div>Technical Maintenance</div>
+      <p class="text-center lg:text-left my-6 text-sm md:text-base">
+        We optimize systems, data and cybersecurity management, helping
+        companies adapt effective and secure digital solutions.
+      </p>
+
+      <div class="text-center lg:text-left">
+        <ul>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />System optimization
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Data management
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Cybersecurity
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="bg-gray-200/10 flex flex-col justify-start py-12 md:py-24 border rounded-2xl px-6 max-w-md mx-auto lg:mx-0"
+    >
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><ChartSpline class="w-5 h-5 md:w-6 md:h-6" /></span
+      >
+
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-left w-full">
+        Technical and Digital Development
+      </h3>
+
+      <p class="text-center lg:text-left my-6 text-sm md:text-base">
+        Powers businesses by creating customized solutions that improve
+        processes, integrate technologies, and optimize operational efficiency.
+      </p>
+
+      <div class="text-center lg:text-left">
+        <ul>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Custom software
+            development
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Systems integration
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Process automation
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-start py-12 md:py-24 px-6 max-w-md mx-auto lg:mx-0">
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A] self-center"
+        ><ShieldCheck class="w-5 h-5 md:w-6 md:h-6" /></span
+      >
+
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-left w-full">Technical Maintenance</h3>
+
+      <p class="text-center lg:text-left my-6 text-sm md:text-base">
+        Ensure the continuous operation of system by updating, repairing and
+        optimizing equipment and software.
+      </p>
+
+      <div class="text-center lg:text-left">
+        <ul>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Preventive maintenance
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />24/7 Technical Support
+          </li>
+          <li class="my-4 flex flex-row justify-center lg:justify-start">
+            <BadgeCheck class="fill-[#9ED7BB] mr-2 shrink-0" />Software updates
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,8 +1,14 @@
+import type { APIRoute } from 'astro';
+
 export const prerender = false;
 
-export async function POST({ request }) {
+interface ContactFormData {
+  email: string;
+}
+
+export const POST: APIRoute = async ({ request }) => {
   try {
-    const data = await request.json();
+    const data: ContactFormData = await request.json();
     const { email } = data;
     console.log('Received data:', data);
     console.log('Email:', email);    
@@ -33,7 +39,8 @@ export async function POST({ request }) {
         }
       );
     }
-  } catch (error) {
+  } catch (error: unknown) {
+    console.error('API Error:', error);
     return new Response(
       JSON.stringify({ 
         success: false, 
