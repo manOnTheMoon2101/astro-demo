@@ -65,30 +65,30 @@
   }
 </script>
 
-<div class="h-96 flex flex-row justify-around text-white relative">
+<div class="min-h-[400px] md:h-96 flex flex-col lg:flex-row justify-around text-white relative px-4">
   <div
     style={`background-image: url(${formBG.src})`}
     class="absolute inset-0 bg-cover bg-center bg-no-repeat"
   ></div>
   <div class="absolute inset-0 bg-[#0C1424]/80"></div>
-  <div class="flex flex-row justify-around items-start relative z-10 w-full">
-    <div class="p-12">
-      <h2 class="text-6xl">Get In Touch</h2>
+  <div class="flex flex-col lg:flex-row justify-around items-start relative z-10 w-full gap-8 py-8 lg:py-0">
+    <div class="p-6 md:p-12 text-center lg:text-left">
+      <h2 class="text-3xl md:text-4xl lg:text-6xl">Get In Touch</h2>
 
-      <p>
-        We guarantee continuous support, updating and repair to<br />ensure the
+      <p class="text-sm md:text-base">
+        We guarantee continuous support, updating and repair to<br class="hidden md:block" />ensure the
         optimal performance of your systems.
       </p>
     </div>
 
-    <div class="p-12">
+    <div class="p-6 md:p-12 w-full max-w-2xl">
       <form onsubmit={handleSubmit}>
-        <div class="flex flex-row my-6">
+        <div class="flex flex-col md:flex-row my-6 gap-4">
           <input
             placeholder="Your Name"
             bind:value={x.name}
             required
-            class="border-b text-2xl mx-2"
+            class="border-b text-lg md:text-2xl bg-transparent text-white placeholder-gray-300 w-full"
             disabled={isSubmitting}
           />
           <input
@@ -96,16 +96,16 @@
             placeholder="Your Email"
             bind:value={x.email}
             required
-            class="border-b text-2xl mx-2"
+            class="border-b text-lg md:text-2xl bg-transparent text-white placeholder-gray-300 w-full"
             disabled={isSubmitting}
           />
         </div>
 
-        <div class="flex flex-row">
+        <div class="flex flex-col md:flex-row gap-4">
           <input
             type="tel"
             placeholder="Your Phone"
-            class="border-b text-2xl mx-2"
+            class="border-b text-lg md:text-2xl bg-transparent text-white placeholder-gray-300 w-full"
             bind:value={x.phone}
             disabled={isSubmitting}
           />
@@ -114,17 +114,17 @@
             placeholder="Subject"
             bind:value={x.subject}
             required
-            class="border-b text-2xl mx-2"
+            class="border-b text-lg md:text-2xl bg-transparent text-white placeholder-gray-300 w-full"
             disabled={isSubmitting}
           />
         </div>
 
         <div class="flex flex-row my-6">
           <textarea
-            placeholder="Tell us about you project"
+            placeholder="Tell us about your project"
             bind:value={x.description}
             required
-            class="border-b text-2xl"
+            class="border-b text-lg md:text-2xl bg-transparent text-white placeholder-gray-300 w-full min-h-[100px] resize-none"
             disabled={isSubmitting}
           ></textarea>
         </div>
@@ -137,18 +137,18 @@
           >
             {#if messageType === "error"}
               <div class="flex items-center">
-                <span class="font-medium">Error: {message}</span>
+                <span class="font-medium text-sm md:text-base">Error: {message}</span>
               </div>
             {:else}
               <div class="flex items-center">
-                <span class="font-medium">Success: {message}</span>
+                <span class="font-medium text-sm md:text-base">Success: {message}</span>
               </div>
             {/if}
           </div>
         {/if}
 
         <button
-          class="bg-[#C4062A] p-4 rounded-full self-center px-12 cursor-pointer"
+          class="bg-[#C4062A] p-3 md:p-4 rounded-full self-center px-8 md:px-12 cursor-pointer text-sm md:text-base w-full md:w-auto"
           type="submit"
           disabled={isSubmitting}
         >

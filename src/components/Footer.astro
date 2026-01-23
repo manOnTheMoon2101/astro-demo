@@ -3,43 +3,44 @@ import logo from "../assets/images/logo.png";
 import { Mail } from "@lucide/astro";
 ---
 
-<footer class="text-white">
+<footer class="text-white px-4">
   <div class="flex flex-col justify-center items-center my-12">
     <div class="flex flex-row my-6">
-      <img alt="Company Logo" src={logo.src} />
+      <img alt="Company Logo" src={logo.src} class="w-8 h-8 md:w-auto md:h-auto" />
       <div class="ml-2 flex flex-col">
-        <span class="font-bold text-2xl">Tembeza</span>
-        <span class="text-sm">International</span>
+        <span class="font-bold text-xl md:text-2xl">Tembeza</span>
+        <span class="text-xs md:text-sm">International</span>
       </div>
     </div>
 
-    <ul class="flex flex-row items-center">
-      <li class="mx-2">Home</li>
-      <li class="mx-2">About</li>
-      <li class="mx-2">Services</li>
-      <li class="mx-2">Why us</li>
-      <li class="mx-2">FAQ's</li>
+    <ul class="flex flex-wrap justify-center items-center gap-2 md:gap-4">
+      <li class="mx-1 md:mx-2 text-sm md:text-base">Home</li>
+      <li class="mx-1 md:mx-2 text-sm md:text-base">About</li>
+      <li class="mx-1 md:mx-2 text-sm md:text-base">Services</li>
+      <li class="mx-1 md:mx-2 text-sm md:text-base">Why us</li>
+      <li class="mx-1 md:mx-2 text-sm md:text-base">FAQ's</li>
     </ul>
 
-    <div class="border rounded-full p-2 my-6 flex flex-row items-center">
-      <span class="p-2 mr-2 rounded-full bg-[#C4062A]"><Mail /></span> clevejohnclaton.2101@gmail.com
+    <div class="border rounded-full p-2 my-6 flex flex-row items-center text-center">
+      <span class="p-2 mb-2 mr-2 rounded-full bg-[#C4062A]"><Mail  /></span> 
+      <span class="text-xs md:text-sm break-all">clevejohnclaton.2101@gmail.com</span>
     </div>
   </div>
 
-  <div class="mx-6 flex flex-row justify-around bg-gray-200/20 p-4 my-12">
+  <div class="mx-4 md:mx-6 flex flex-col md:flex-row justify-around bg-gray-200/20 p-4 my-12 gap-4 rounded-lg">
     <div>
-      <ul class="flex flex-row">
-        <li>Copyright</li>
-        <li>Tembeza International</li>
-        <li>All Rights Reserved</li>
+      <ul class="flex flex-col md:flex-row gap-2 md:gap-4 text-center md:text-left">
+        <li class="text-xs md:text-sm">Copyright</li>
+        <li class="text-xs md:text-sm">Tembeza International</li>
+        <li class="text-xs md:text-sm">All Rights Reserved</li>
       </ul>
     </div>
 
     <div>
-      <ul class="flex flex-row">
-        <li>Privacy Policy</li>
-        <li>Terms of Service</li>
-        <li>Cookie Policy</li>
+      <ul class="flex flex-col md:flex-row gap-2 md:gap-4 text-center md:text-left">
+        <li class="text-xs md:text-sm">Privacy Policy</li>
+        <li class="text-xs md:text-sm">Terms of Service</li>
+        <li class="text-xs md:text-sm">Cookie Policy</li>
       </ul>
     </div>
   </div>

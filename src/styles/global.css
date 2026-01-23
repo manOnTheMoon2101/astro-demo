@@ -3,6 +3,48 @@
 html {
   scroll-behavior: smooth;
 }
+
 section {
   scroll-margin-top: 2rem;
+}
+
+/* Mobile-first responsive improvements */
+body {
+  overflow-x: hidden;
+}
+
+/* Better text rendering on mobile */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+}
+
+/* Form input styles for better mobile experience */
+input, textarea {
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #C4062A;
+}
+
+/* Button interactions */
+button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
 }

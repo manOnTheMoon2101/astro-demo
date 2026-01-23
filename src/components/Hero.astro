@@ -7,63 +7,68 @@ import { Globe } from "@lucide/astro";
 ---
 
 <div
-  class="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+  class="bg-cover bg-center bg-no-repeat flex flex-col relative px-4 pb-32 md:pb-20"
   style={`background-image: url(${hero.src})`}
 >
   <div class="absolute inset-0 bg-[#0C1424]/80 z-0"></div>
-  <div
-    class="text-white flex flex-col text-center justify-center relative z-10"
-  >
-    <h2 class="text-6xl font-bold">
-      Tembeza: Revolutionize your<br />Technology, exceed your goals
-    </h2>
-
-    <span class="my-4 text-gray-200"
-      >Innovation,Development and Support for an Efficent Future</span
-    >
-
-    <button class="bg-[#C4062A] p-4 rounded-full self-center px-12"
-      >Discover Now</button
-    >
-  </div>
-
-  <div
-    class="flex flex-row justify-between absolute bottom-0 left-0 right-0 transform translate-y-1/2 px-8 gap-4 my-8 z-10"
-  >
+  
+  <!-- Main hero content -->
+  <div class="min-h-screen flex items-center justify-center relative z-10">
     <div
-      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
+      class="text-white flex flex-col text-center justify-center max-w-4xl mx-auto"
     >
-      <span class="p-4 my-2 rounded bg-[#C4062A]"
-        ><Trophy class="text-white" /></span
+      <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
+        Tembeza: Revolutionize your<br class="hidden md:block" />Technology, exceed your goals
+      </h2>
+
+      <span class="my-4 text-gray-200 text-sm md:text-base"
+        >Innovation, Development and Support for an Efficient Future</span
       >
 
-      <h3 class="text-4xl font-bold">100% Experience</h3>
+      <button class="bg-[#C4062A] p-3 md:p-4 rounded-full self-center px-8 md:px-12 text-sm md:text-base"
+        >Discover Now</button
+      >
+    </div>
+  </div>
 
-      <span>5 years of service</span>
+  <!-- Cards section -->
+  <div
+    class="flex flex-col md:flex-row justify-between px-4 md:px-8 gap-4 relative z-10 -mt-16 md:-mt-12"
+  >
+    <div
+      class="bg-[#0C1424] w-full h-auto flex flex-col items-center justify-center rounded-lg shadow-lg py-6 md:py-24 px-4"
+    >
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A]"
+        ><Trophy class="text-white w-5 h-5 md:w-6 md:h-6" /></span
+      >
+
+      <h3 class="text-lg md:text-2xl lg:text-4xl font-bold text-center">100% Experience</h3>
+
+      <span class="text-sm md:text-base text-center">5 years of service</span>
     </div>
 
     <div
-      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
+      class="bg-[#0C1424] w-full h-auto flex flex-col items-center justify-center rounded-lg shadow-lg py-6 md:py-24 px-4"
     >
-      <span class="p-4 my-2 rounded bg-[#C4062A]"><Users /></span>
-      <h3 class="text-4xl">Digital Solutions</h3>
-      <span>Technological Development</span>
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A]"><Users class="w-5 h-5 md:w-6 md:h-6" /></span>
+      <h3 class="text-lg md:text-2xl lg:text-4xl text-center">Digital Solutions</h3>
+      <span class="text-sm md:text-base text-center">Technological Development</span>
     </div>
 
     <div
-      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
+      class="bg-[#0C1424] w-full h-auto flex flex-col items-center justify-center rounded-lg shadow-lg py-6 md:py-24 px-4"
     >
-      <span class="p-4 my-2 rounded bg-[#C4062A]"><Zap /></span>
-      <h3 class="text-4xl font-bold">Maintenace</h3>
-      <span>Specialized Support</span>
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A]"><Zap class="w-5 h-5 md:w-6 md:h-6" /></span>
+      <h3 class="text-lg md:text-2xl lg:text-4xl font-bold text-center">Maintenance</h3>
+      <span class="text-sm md:text-base text-center">Specialized Support</span>
     </div>
 
     <div
-      class="bg-[#0C1424] w-full h-16 flex flex-col items-center justify-center rounded-lg shadow-lg py-24"
+      class="bg-[#0C1424] w-full h-auto flex flex-col items-center justify-center rounded-lg shadow-lg py-6 md:py-24 px-4"
     >
-      <span class="p-4 my-2 rounded bg-[#C4062A]"> <Globe /></span>
-      <h3 class="text-4xl font-bold">Confidentiality</h3>
-      <span>Secure Data</span>
+      <span class="p-3 md:p-4 my-2 rounded bg-[#C4062A]"> <Globe class="w-5 h-5 md:w-6 md:h-6" /></span>
+      <h3 class="text-lg md:text-2xl lg:text-4xl font-bold text-center">Confidentiality</h3>
+      <span class="text-sm md:text-base text-center">Secure Data</span>
     </div>
   </div>
 </div>

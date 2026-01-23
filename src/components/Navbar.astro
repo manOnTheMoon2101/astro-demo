@@ -2,32 +2,32 @@
 import logo from "../assets/images/logo.png";
 ---
 
-<nav class="flex flex-row justify-between items-center m-6 text-white">
-  <div class="flex flex-row">
-    <img alt="Company Logo" src={logo.src} />
+<nav class="flex flex-col md:flex-row justify-between items-center m-4 md:m-6 text-white">
+  <div class="flex flex-row mb-4 md:mb-0">
+    <img alt="Company Logo" src={logo.src} class="w-8 h-8 md:w-auto md:h-auto" />
     <div class="ml-2 flex flex-col">
-      <span class="font-bold text-2xl">Tembeza</span>
-      <span class="text-sm">International</span>
+      <span class="font-bold text-xl md:text-2xl">Tembeza</span>
+      <span class="text-xs md:text-sm">International</span>
     </div>
   </div>
-  <ul class="flex flex-row items-center">
-    <li class="mx-2">
-      <a href="#home" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Home</a>
+  <ul class="flex flex-wrap justify-center md:flex-row items-center gap-2 md:gap-0">
+    <li class="mx-1 md:mx-2">
+      <a href="#home" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors text-sm md:text-base">Home</a>
     </li>
-    <li class="mx-2">
-      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">About</a>
+    <li class="mx-1 md:mx-2">
+      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors text-sm md:text-base">About</a>
     </li>
-    <li class="mx-2">
-      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Services</a>
+    <li class="mx-1 md:mx-2">
+      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors text-sm md:text-base">Services</a>
     </li>
-    <li class="mx-2">
-      <a href="#why-us" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Why us</a>
+    <li class="mx-1 md:mx-2">
+      <a href="#why-us" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors text-sm md:text-base">Why us</a>
     </li>
-    <li class="mx-2">
-      <a href="#faq" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">FAQ's</a>
+    <li class="mx-1 md:mx-2">
+      <a href="#faq" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors text-sm md:text-base">FAQ's</a>
     </li>
-    <li class="mx-2">
-      <a href="#contact" class="bg-[#C4062A] px-4 py-2 rounded-full hover:bg-[#A0051F] transition-colors">Contact Us</a>
+    <li class="mx-1 md:mx-2 mt-2 md:mt-0">
+      <a href="#contact" class="bg-[#C4062A] px-3 py-1 md:px-4 md:py-2 rounded-full hover:bg-[#A0051F] transition-colors text-sm md:text-base">Contact Us</a>
     </li>
   </ul>
 </nav>
