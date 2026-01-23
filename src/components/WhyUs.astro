@@ -1,20 +1,29 @@
 ---
 import person from "../assets/images/person.png";
+import { SquarePen } from "@lucide/astro";
+import { Settings } from "@lucide/astro";
+import { Search } from "@lucide/astro";
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col my-24">
   <div class="flex flex-row justify-around items-center">
-    <div>
+    <div class="px-12">
       <img src={person.src} />
     </div>
 
-    <div>
-      <h2>Why choose us?</h2>
+    <div class="px-12 flex flex-col justify-start items-start">
+      <h2 class="text-6xl font-bold">
+        Why choose <span class="text-[#C4062A]">us?</span>
+      </h2>
 
-      <ul>
-        <li>Technological Consulting</li>
-        <li>Technical Development</li>
-        <li>Technical Maintenance</li>
+      <ul class="flex flex-row my-8">
+        <li class="border-r-2 border-[#C4062A] mr-2 px-2">
+          Technological Consulting
+        </li>
+        <li class="border-r-2 border-[#C4062A] mr-2 px-2">
+          Technical Development
+        </li>
+        <li class="mx-2 px-2">Technical Maintenance</li>
       </ul>
 
       <p>
@@ -24,19 +33,50 @@ import person from "../assets/images/person.png";
         perfect condition.
       </p>
 
-      <button>Read More</button>
+      <button class="bg-[#C4062A] px-12 py-4 rounded-full my-8"
+        >Read More</button
+      >
     </div>
   </div>
 
-  <div class="flex flex-col justify-center items-center">
-    <h4>Passion · Dedication · Professionalism</h4>
+  <div class="flex flex-col justify-center items-center text-center my-24">
+    <h4 class="text-[#9ED7BB]">Passion · Dedication · Professionalism</h4>
 
-    <h2>Tembeza: Innovation, Development and Support tailored to you.</h2>
+    <h2 class="text-6xl font-bold">
+      Tembeza: Innovation, Development<br />and Support tailored to you.
+    </h2>
 
     <div>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div class="flex flex-row items-center border rounded-2xl my-12 p-6">
+        <span class="p-4 my-2 rounded bg-[#C4062A]"><SquarePen /></span>
+        <div class="flex flex-col justify-start items-start ml-4">
+          <h4>Comprehensive Consulting</h4>
+          <p>
+            We offer expert technology consulting, optimizing digital systems
+            and strategies.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-row items-center border rounded-2xl my-12 p-6">
+        <span class="p-4 my-2 rounded bg-[#C4062A]"><Settings /></span>
+        <div class="flex flex-col justify-start items-start ml-4">
+          <h4>Custom development</h4>
+          <p>
+            We create tailored technical and digital solutions to drive
+            efficiency and innovation
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-row items-center border rounded-2xl my-12 p-6">
+        <span class="p-4 my-2 rounded bg-[#C4062A]"><Search /></span>
+        <div class="flex flex-col justify-start items-start ml-4">
+          <h4>Reliable Maintenance</h4>
+          <p>
+            We guarantee continuous support, updating and repair to ensure the
+            optimal performance of your systems.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
