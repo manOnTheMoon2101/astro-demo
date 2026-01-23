@@ -1,5 +1,5 @@
 <script lang="ts">
-  import formBG from "../assets/images/formBG.png";
+  import formBG from "../assets/images/formBG.webp";
 
   interface FormInterface {
     name: string;
