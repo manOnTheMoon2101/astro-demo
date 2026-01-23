@@ -11,13 +11,58 @@ import logo from "../assets/images/logo.png";
     </div>
   </div>
   <ul class="flex flex-row items-center">
-    <li class="mx-2">Home</li>
-    <li class="mx-2">About</li>
-    <li class="mx-2">Services</li>
-    <li class="mx-2">Why us</li>
-    <li class="mx-2">FAQ's</li>
     <li class="mx-2">
-      <button class="bg-[#C4062A] px-4 py-2 rounded-full">Contact Us</button>
+      <a href="#home" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Home</a>
+    </li>
+    <li class="mx-2">
+      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">About</a>
+    </li>
+    <li class="mx-2">
+      <a href="#services" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Services</a>
+    </li>
+    <li class="mx-2">
+      <a href="#why-us" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">Why us</a>
+    </li>
+    <li class="mx-2">
+      <a href="#faq" class="nav-link cursor-pointer hover:text-[#C4062A] transition-colors">FAQ's</a>
+    </li>
+    <li class="mx-2">
+      <a href="#contact" class="bg-[#C4062A] px-4 py-2 rounded-full hover:bg-[#A0051F] transition-colors">Contact Us</a>
     </li>
   </ul>
 </nav>
+
+<script lang="ts">
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    const contactButton = document.querySelector('a[href="#contact"]');
+    if (contactButton) {
+      contactButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetElement = document.querySelector('#contact');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    }
+  });
+</script>
