@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
+  import type { SlotString } from "astro/runtime/server/render/slot.js";
   import formBG from "../assets/images/formBG.png";
-  let x = $state({
+
+  interface FormInterface{
+    name : string;
+    email : string;
+    phone : string;
+    subject : string;
+    description : string
+  }
+  let x = $state<FormInterface>({
     name: "",
     email: "",
     phone: "",
@@ -8,11 +17,11 @@
     description: "",
   });
 
-  let isSubmitting = $state(false);
-  let message = $state("");
-  let messageType = $state("");
+  let isSubmitting = $state<boolean>(false);
+  let message = $state<string>("");
+  let messageType = $state<string>("");
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event : any) {
     event.preventDefault();
 
     if (isSubmitting) return;
@@ -47,10 +56,10 @@
         messageType = "error";
         message = `${result.message} (Status: ${response.status})`;
       }
-    } catch (error) {
+    } catch (error : any) {
       console.error("Form submission error:", error);
       messageType = "error";
-      message = `Network error: ${error.message}`;
+      message = `Network error: ${error?.message}`;
     } finally {
       isSubmitting = false;
     }
